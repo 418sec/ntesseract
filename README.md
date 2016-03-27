@@ -9,17 +9,24 @@ A simple wrapper for the Tesseract OCR package for node.js
 * Tesseract 3.01 or higher is needed for this to work
 
 ## Installation
+
 There is a hard dependency on the [Tesseract project](https://code.google.com/p/tesseract-ocr/).  You can find installation instructions for various platforms on the project site. For Homebrew users, the installation is quick and easy.
 
-    brew install tesseract --all-languages
+```sh
+brew install tesseract --with-all-languages
+```
 
-The above will install all of the language packages available, if you don't need them all you can remove the `--all-languages` flag and install them manually, by downloading them to your local machine and then exposing the `TESSDATA_PREFIX` variable into your path:
+The above will install all of the language packages available, if you don't need them all you can remove the `--with-all-languages` flag and install them manually, by downloading them to your local machine and then exposing the `TESSDATA_PREFIX` variable into your path:
 
-    export TESSDATA_PREFIX=~/Downloads/
+```sh
+export TESSDATA_PREFIX=~/Downloads/
+```
 
 You can then go about installing the node-module to expose the JavaScript API:
 
-    npm install ntesseract
+```sh
+npm install ntesseract
+```
 
 ## Usage
 
@@ -53,6 +60,7 @@ tesseract.process(__dirname + '/path/to/image.jpg', options, function(err, text)
 ```
 
 ## Changelog
+* **0.2.8**: Adds custom output option and extra custom options through starting with '-' in `options` object. 
 * **0.2.7**: Adds output file extension detection
 * **0.2.6**: Catches exception when deleting tmp files that do not exist
 * **0.2.5**: Preserves whitespace and replaces tmp module
