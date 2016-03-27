@@ -1,6 +1,6 @@
 # Tesseract for node.js
 
-[![NPM](https://nodei.co/npm/node-tesseract.png)](https://nodei.co/npm/node-tesseract/)
+[![NPM](https://nodei.co/npm/ntesseract.png)](https://nodei.co/npm/ntesseract/)
 
 A simple wrapper for the Tesseract OCR package for node.js
 
@@ -19,12 +19,12 @@ The above will install all of the language packages available, if you don't need
 
 You can then go about installing the node-module to expose the JavaScript API:
 
-    npm install node-tesseract
+    npm install ntesseract
 
 ## Usage
 
 ```JavaScript
-var tesseract = require('node-tesseract');
+var tesseract = require('ntesseract');
 
 // Recognize text of any language in any format
 tesseract.process(__dirname + '/path/to/image.jpg',function(err, text) {

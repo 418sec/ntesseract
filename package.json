@@ -1,12 +1,15 @@
 {
-  "name": "node-tesseract",
+  "name": "ntesseract",
   "version": "0.2.7",
-  "author": "Desmond Morris <hi@desmondmorris.com>",
+  "authors": [
+    "Tao Yuan <towyuan@outlook.com>",
+    "Desmond Morris <hi@desmondmorris.com>"
+  ],
   "description": "A simple wrapper for the Tesseract OCR package",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/desmondmorris/node-tesseract/"
+    "url": "https://github.com/taoyuan/ntesseract/"
   },
   "keywords": [
     "tesseract",
@@ -14,12 +17,13 @@
     "text recognition"
   ],
   "dependencies": {
-    "glob": "^5.0.10",
-    "node-uuid": "^1.4.1"
+    "glob": "^7.0.3",
+    "lodash.assign": "^4.0.6",
+    "node-uuid": "^1.4.7"
   },
   "devDependencies": {
-    "mocha": "~1.16.0",
-    "should": "~2.1.1"
+    "chai": "^3.5.0",
+    "mocha": "~2.4.5"
   },
   "scripts": {
     "test": "mocha"
