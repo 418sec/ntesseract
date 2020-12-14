@@ -24,6 +24,7 @@ describe('process', function () {
   it('should return the string "node-tesseract"', function (done) {
     var image = path.join(__dirname, 'fixtures', 'test.png');
     tesseract.process(image, function (err, text) {
+      assert.notOk(err);
       assert.equal(text.trim(), 'node-tesseract');
       done();
     });
