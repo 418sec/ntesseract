@@ -17,7 +17,7 @@ describe('process', function () {
       '--user-words': './userwords',
       '--user-patterns': './userpatterns'
     };
-    var command = 'tesseract-ocr test.png /tmp/tesseract -l chs -psm 9  --tessdata-dir ./tessdata --user-words ./userwords --user-patterns ./userpatterns';
+    var command = 'tesseract-ocr test.png /tmp/tesseract -l chs --psm 9  --tessdata-dir ./tessdata --user-words ./userwords --user-patterns ./userpatterns';
     assert.equal(tesseract.command('test.png', options), command);
   });
 
